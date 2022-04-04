@@ -206,8 +206,8 @@ There is a separate [Nova Package](https://github.com/jeffersonsimaogoncalves/Mu
 
 ## Reporting Issues
 
-If you have a problem with this plugin or any bug, please open an issue on [GitHub](https://github.com/jeffersonsimaogoncalves/MultitenancyNovaTool/issues).
+If you have a problem with this plugin or any bug, please open an issue on [GitHub](https://github.com/jeffersonsimaogoncalves/Multitenancy/issues).
 
 ## Credits
 
-This work is based on the [code by JeffersonSimaoGoncalves](https://github.com/JeffersonSimaoGoncalves/MultitenancyNovaTool).
+This work is based on the [code by RomegaDigital](https://github.com/JeffersonSimaoGoncalves/Multitenancy).
