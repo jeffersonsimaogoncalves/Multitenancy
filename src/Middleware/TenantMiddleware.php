@@ -1,18 +1,18 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Middleware;
+namespace JeffersonSimaoGoncalves\Multitenancy\Middleware;
 
 use Closure;
-use RomegaDigital\Multitenancy\Multitenancy;
+use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 use Illuminate\Contracts\Auth\Factory as Auth;
-use RomegaDigital\Multitenancy\Contracts\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-use RomegaDigital\Multitenancy\Exceptions\UnauthorizedException;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\UnauthorizedException;
 
 class TenantMiddleware extends Middleware
 {
     /**
-     * @var RomegaDigital\Multitenancy\Multitenancy
+     * @var \JeffersonSimaoGoncalves\Multitenancy\Multitenancy
      */
     protected $multitenancy;
 
@@ -20,7 +20,7 @@ class TenantMiddleware extends Middleware
      * Create new TenantMiddleware instance.
      *
      * @param Illuminate\Contracts\Auth\Factory       $auth
-     * @param RomegaDigital\Multitenancy\Multitenancy $multitenancy
+     * @param JeffersonSimaoGoncalves\Multitenancy\Multitenancy $multitenancy
      */
     public function __construct(Auth $auth, Multitenancy $multitenancy)
     {
@@ -50,7 +50,7 @@ class TenantMiddleware extends Middleware
      * @param \Closure                 $next
      * @param string[]                 ...$guards
      *
-     * @throws \RomegaDigital\Multitenancy\Exceptions\UnauthorizedException|\Illuminate\Auth\AuthenticationException
+     * @throws \JeffersonSimaoGoncalves\Multitenancy\Exceptions\UnauthorizedException|\Illuminate\Auth\AuthenticationException
      *
      * @return mixed
      */
@@ -74,7 +74,7 @@ class TenantMiddleware extends Middleware
     /**
      * Check if user is authorized to access tenant's domain.
      *
-     * @param \RomegaDigital\Multitenancy\Contracts\Tenant $tenant
+     * @param \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant $tenant
      *
      * @return bool
      */

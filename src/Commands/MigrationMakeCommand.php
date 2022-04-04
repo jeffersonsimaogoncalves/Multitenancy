@@ -1,6 +1,6 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Commands;
+namespace JeffersonSimaoGoncalves\Multitenancy\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Filesystem\Filesystem;

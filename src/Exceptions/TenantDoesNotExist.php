@@ -1,6 +1,6 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Exceptions;
+namespace JeffersonSimaoGoncalves\Multitenancy\Exceptions;
 
 use InvalidArgumentException;
 

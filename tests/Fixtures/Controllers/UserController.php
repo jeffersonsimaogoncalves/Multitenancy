@@ -1,14 +1,14 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Fixtures\Controllers;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\Controllers;
 
 use Closure;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\Assert;
-use RomegaDigital\Multitenancy\Models\Tenant;
-use RomegaDigital\Multitenancy\Tests\Fixtures\User;
+use JeffersonSimaoGoncalves\Multitenancy\Models\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use RomegaDigital\Multitenancy\Middleware\TenantMiddleware;
+use JeffersonSimaoGoncalves\Multitenancy\Middleware\TenantMiddleware;
 
 class UserController extends \Illuminate\Routing\Controller
 {

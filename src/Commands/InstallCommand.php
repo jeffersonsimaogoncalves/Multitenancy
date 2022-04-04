@@ -1,9 +1,9 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Commands;
+namespace JeffersonSimaoGoncalves\Multitenancy\Commands;
 
 use Illuminate\Console\Command;
-use RomegaDigital\Multitenancy\Multitenancy;
+use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 
 class InstallCommand extends Command
 {
@@ -27,7 +27,7 @@ class InstallCommand extends Command
     /**
      * Multitenancy Service Class.
      *
-     * @var RomegaDigital\Multitenancy\Multitenancy
+     * @var JeffersonSimaoGoncalves\Multitenancy\Multitenancy
      */
     protected $multitenancy;
 
@@ -72,7 +72,7 @@ class InstallCommand extends Command
         ]);
 
         $this->callSilent('vendor:publish', [
-            '--provider' => 'RomegaDigital\Multitenancy\MultitenancyServiceProvider',
+            '--provider' => 'JeffersonSimaoGoncalves\Multitenancy\MultitenancyServiceProvider',
             '--tag'      => ['migrations'],
         ]);
 

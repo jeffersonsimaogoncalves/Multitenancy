@@ -1,11 +1,11 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature;
 
 use Illuminate\Http\Response;
-use RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist;
-use RomegaDigital\Multitenancy\Middleware\TenantMiddleware;
-use RomegaDigital\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
+use JeffersonSimaoGoncalves\Multitenancy\Middleware\TenantMiddleware;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
 
 class MultitenancyTest extends TestCase
 {

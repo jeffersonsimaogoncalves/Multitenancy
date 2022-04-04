@@ -1,30 +1,35 @@
 {
-    "name": "romegadigital/multitenancy",
+    "name": "jeffersonsimaogoncalves/multitenancy",
     "description": "Adds domain based multitenancy to Laravel applications.",
     "license": "MIT",
     "authors": [
         {
             "name": "Braden Keith",
             "email": "bkeith@romegadigital.com"
+        },
+        {
+            "name": "Jefferson Simão Gonçalves",
+            "email": "gerson.simao.92@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "RomegaDigital\\Multitenancy\\": "src/"
+            "JeffersonSimaoGoncalves\\Multitenancy\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RomegaDigital\\Multitenancy\\Tests\\": "tests/"
+            "JeffersonSimaoGoncalves\\Multitenancy\\Tests\\": "tests/"
         }
     },
     "require": {
-        "spatie/laravel-permission": "^3.0"
+        "php": "^7.4|^8.0",
+        "spatie/laravel-permission": "^3.0|^4.0|^5.0"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "RomegaDigital\\Multitenancy\\MultitenancyServiceProvider"
+                "JeffersonSimaoGoncalves\\Multitenancy\\MultitenancyServiceProvider"
             ]
         }
     },

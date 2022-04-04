@@ -1,11 +1,11 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Fixtures;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures;
 
 use Illuminate\Auth\Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Database\Eloquent\Model;
-use RomegaDigital\Multitenancy\Traits\HasTenants;
+use JeffersonSimaoGoncalves\Multitenancy\Traits\HasTenants;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;

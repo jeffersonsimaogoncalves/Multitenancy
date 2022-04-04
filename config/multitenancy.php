@@ -49,13 +49,13 @@ return [
     |--------------------------------------------------------------------------
     |
     | The policy file to use when using [MultitenancyNovaTool]
-    | (https://github.com/romegasoftware/MultitenancyNovaTool)
+    | (https://github.com/jeffersonsimaogoncalves/MultitenancyNovaTool)
     */
 
     'policies' => [
-        'role' => \RomegaDigital\MultitenancyNovaTool\Policies\RolePolicy::class,
+        'role' => \JeffersonSimaoGoncalves\MultitenancyNovaTool\Policies\RolePolicy::class,
 
-        'permission' => \RomegaDigital\MultitenancyNovaTool\Policies\PermissionPolicy::class,
+        'permission' => \JeffersonSimaoGoncalves\MultitenancyNovaTool\Policies\PermissionPolicy::class,
     ],
 
     /*
@@ -64,13 +64,13 @@ return [
     |--------------------------------------------------------------------------
     |
     | The Nova resources to use when using [MultitenancyNovaTool]
-    | (https://github.com/romegasoftware/MultitenancyNovaTool)
+    | (https://github.com/jeffersonsimaogoncalves/MultitenancyNovaTool)
     */
 
     'resources' => [
-        'role' => \Vyuldashev\NovaPermission\Role::class,
+        'role' => \JeffersonSimaoGoncalves\NovaPermission\Role::class,
 
-        'permission' => \Vyuldashev\NovaPermission\Permission::class,
+        'permission' => \JeffersonSimaoGoncalves\NovaPermission\Permission::class,
     ],
 
     /*
@@ -81,10 +81,10 @@ return [
     | This is the model you are using for Tenants that will be attached to the
     | User instance. It would be recommended to extend the Tenant model as
     | defined in the package, but if you replace it, be sure to implement
-    | the RomegaDigital\Multitenancy\Contracts\Tenant contract.
+    | the JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant contract.
     */
 
-    'tenant_model' => \RomegaDigital\Multitenancy\Models\Tenant::class,
+    'tenant_model' => \JeffersonSimaoGoncalves\Multitenancy\Models\Tenant::class,
 
     'table_names' => [
         /**

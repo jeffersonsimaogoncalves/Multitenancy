@@ -1,11 +1,11 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature\Commands;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature\Commands;
 
 use Spatie\Permission\Models\Role;
-use RomegaDigital\Multitenancy\Models\Tenant;
-use RomegaDigital\Multitenancy\Tests\TestCase;
-use RomegaDigital\Multitenancy\Tests\Fixtures\User;
+use JeffersonSimaoGoncalves\Multitenancy\Models\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\User;
 
 class AssignAdminPrivilegesTest extends TestCase
 {

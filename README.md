@@ -1,6 +1,6 @@
 # Multitenancy Package
 
-[![Total Downloads](https://img.shields.io/packagist/dt/romegadigital/multitenancy.svg?style=flat-square)](https://packagist.org/packages/romegadigital/multitenancy)
+[![Total Downloads](https://img.shields.io/packagist/dt/jeffersonsimaogoncalves/multitenancy.svg?style=flat-square)](https://packagist.org/packages/jeffersonsimaogoncalves/multitenancy)
 
 This package is meant to be a quick and easy way to add multitenancy to your Laravel application. It simply creates models and relationships for Tenants and models. The package identifies incoming traffic by subdomain, and finds a corresponding tenant in the Tenant table. If none are found or the user is not associated with a particular subdomain, the user is met with a 403 error.
 
@@ -28,7 +28,7 @@ Any resources saved while accessing a scoped subdomain will automatically be sav
 You can install the package via composer:
 
 ``` bash
-composer require romegadigital/multitenancy
+composer require jeffersonsimaogoncalves/multitenancy
 ```
 
 In Laravel 5.5 the service provider will automatically get registered. In older versions of the framework you should add the service provider in the `config/app.php` file:
@@ -36,14 +36,14 @@ In Laravel 5.5 the service provider will automatically get registered. In older 
 ```php
 'providers' => [
     // ...
-    RomegaDigital\Multitenancy\MultitenancyServiceProvider::class,
+    JeffersonSimaoGoncalves\Multitenancy\MultitenancyServiceProvider::class,
 ];
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="RomegaDigital\Multitenancy\MultitenancyServiceProvider" --tag="config"
+php artisan vendor:publish --provider="JeffersonSimaoGoncalves\Multitenancy\MultitenancyServiceProvider" --tag="config"
 ```
 
 If you want the user to automatically be assigned to the Tenant it is created on you can enable this functionality by simply enabling the `ignore_tenant_on_user_creation` setting.
@@ -61,11 +61,11 @@ It will:
 
 ## Usage
 
-First, add the `RomegaDigital\Multitenancy\Traits\HasTenants` and `Spatie\Permission\Traits\HasRoles` traits to your User model(s):
+First, add the `JeffersonSimaoGoncalves\Multitenancy\Traits\HasTenants` and `Spatie\Permission\Traits\HasRoles` traits to your User model(s):
 
 ```php
 use Spatie\Permission\Traits\HasRoles;
-use RomegaDigital\Multitenancy\Traits\HasTenants;
+use JeffersonSimaoGoncalves\Multitenancy\Traits\HasTenants;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -114,7 +114,7 @@ This package comes with `TenantMiddleware` middleware which extends Laravel's `I
 ```php
 protected $routeMiddleware = [
     // ...
-    'tenant.auth' => \RomegaDigital\Multitenancy\Middleware\TenantMiddleware::class,
+    'tenant.auth' => \JeffersonSimaoGoncalves\Multitenancy\Middleware\TenantMiddleware::class,
 ];
 ```
 
@@ -132,7 +132,7 @@ This package comes with `GuestTenantMiddleware` middleware which applies the ten
 ```php
 protected $routeMiddleware = [
     // ...
-    'tenant.guest' => \RomegaDigital\Multitenancy\Middleware\GuestTenantMiddleware::class,
+    'tenant.guest' => \JeffersonSimaoGoncalves\Multitenancy\Middleware\GuestTenantMiddleware::class,
 ];
 ```
 
@@ -152,7 +152,7 @@ For example, say you wanted Tenants to manage their own `Product`. In your `Prod
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use RomegaDigital\Multitenancy\Traits\BelongsToTenant;
+use JeffersonSimaoGoncalves\Multitenancy\Traits\BelongsToTenant;
 
 class Product extends Model
 {
@@ -202,4 +202,12 @@ php artisan multitenancy:super-admin admin@example.com
 
 ## Managing with Nova
 
-There is a separate [Nova Package](https://github.com/romegadigital/MultitenancyNovaTool) available that allows you to manage the resources utilized in this package in Nova.
+There is a separate [Nova Package](https://github.com/jeffersonsimaogoncalves/MultitenancyNovaTool) available that allows you to manage the resources utilized in this package in Nova.
+
+## Reporting Issues
+
+If you have a problem with this plugin or any bug, please open an issue on [GitHub](https://github.com/jeffersonsimaogoncalves/MultitenancyNovaTool/issues).
+
+## Credits
+
+This work is based on the [code by JeffersonSimaoGoncalves](https://github.com/JeffersonSimaoGoncalves/MultitenancyNovaTool).

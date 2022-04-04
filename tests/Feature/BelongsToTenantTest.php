@@ -1,11 +1,11 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature;
 
-use RomegaDigital\Multitenancy\Models\Tenant;
-use RomegaDigital\Multitenancy\Tests\TestCase;
-use RomegaDigital\Multitenancy\Tests\Fixtures\Product;
-use RomegaDigital\Multitenancy\Tests\Fixtures\Controllers\ProductController;
+use JeffersonSimaoGoncalves\Multitenancy\Models\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\Product;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\Controllers\ProductController;
 
 class BelongsToTenantTest extends TestCase
 {

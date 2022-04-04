@@ -1,9 +1,9 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Fixtures;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures;
 
 use Illuminate\Database\Eloquent\Model;
-use RomegaDigital\Multitenancy\Traits\BelongsToTenant;
+use JeffersonSimaoGoncalves\Multitenancy\Traits\BelongsToTenant;
 
 class Product extends Model
 {

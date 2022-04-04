@@ -1,14 +1,14 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Middleware;
+namespace JeffersonSimaoGoncalves\Multitenancy\Middleware;
 
 use Closure;
-use RomegaDigital\Multitenancy\Multitenancy;
+use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 
 class GuestTenantMiddleware
 {
     /**
-     * @var RomegaDigital\Multitenancy\Multitenancy
+     * @var \JeffersonSimaoGoncalves\Multitenancy\Multitenancy
      */
     protected $multitenancy;
 
@@ -16,7 +16,7 @@ class GuestTenantMiddleware
      * Create new TenantMiddleware instance.
      *
      * @param Illuminate\Contracts\Auth\Factory $auth
-     * @param RomegaDigital\Multitenancy\Multitenancy $multitenancy
+     * @param JeffersonSimaoGoncalves\Multitenancy\Multitenancy $multitenancy
      */
     public function __construct(Multitenancy $multitenancy)
     {

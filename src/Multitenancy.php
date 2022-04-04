@@ -1,10 +1,10 @@
 <?php
 
-namespace RomegaDigital\Multitenancy;
+namespace JeffersonSimaoGoncalves\Multitenancy;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use RomegaDigital\Multitenancy\Contracts\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant;
 
 class Multitenancy
 {
@@ -20,7 +20,7 @@ class Multitenancy
     /**
      * The current tenant model.
      *
-     * @var RomegaDigital\Multitenancy\Contracts\Tenant
+     * @var \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
     protected $tenant = null;
 
@@ -44,7 +44,7 @@ class Multitenancy
     /**
      * Sets the Tenant to a Tenant Model.
      *
-     * @param RomegaDigital\Multitenancy\Contracts\Tenant $tenant
+     * @param \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant $tenant
      *
      * @return $this
      */
@@ -58,7 +58,7 @@ class Multitenancy
     /**
      * Returns the current Tenant.
      *
-     * @return \RomegaDigital\Multitenancy\Contracts\Tenant
+     * @return \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
     public function currentTenant(): Tenant
     {
@@ -69,7 +69,7 @@ class Multitenancy
      * Applies applicable tenant scopes to model or if not booted yet
      * store for deferment.
      *
-     * @param Illuminate\Database\Eloquent\Model $model
+     * @param \Illuminate\Database\Eloquent\Model $model
      *
      * @return void|null
      */
@@ -93,7 +93,7 @@ class Multitenancy
     /**
      * Applies applicable tenant id to model on create.
      *
-     * @param Illuminate\Database\Eloquent\Model $model
+     * @param \Illuminate\Database\Eloquent\Model $model
      *
      * @return void|null
      */
@@ -126,7 +126,7 @@ class Multitenancy
     /**
      * Get an instance of the tenant class.
      *
-     * @return \RomegaDigital\Multitenancy\Contracts\Tenant
+     * @return \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
     public function getTenantClass(): Tenant
     {
@@ -172,9 +172,7 @@ class Multitenancy
 
         // Combine multiple level of domains into 1 string
         // ex: back to masterdomain.test
-        $subdomain = implode('.', $subdomains);
-
-        return $subdomain;
+        return implode('.', $subdomains);
     }
 
     /**
@@ -207,7 +205,7 @@ class Multitenancy
     /**
      * Returns tenant from request subdomain.
      *
-     * @return \RomegaDigital\Multitenancy\Contracts\Tenant
+     * @return \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
     public function receiveTenantFromRequest()
     {

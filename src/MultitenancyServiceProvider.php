@@ -1,15 +1,15 @@
 <?php
 
-namespace RomegaDigital\Multitenancy;
+namespace JeffersonSimaoGoncalves\Multitenancy;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
-use RomegaDigital\Multitenancy\Commands\InstallCommand;
-use RomegaDigital\Multitenancy\Commands\MigrationMakeCommand;
-use RomegaDigital\Multitenancy\Commands\AssignAdminPrivileges;
-use RomegaDigital\Multitenancy\Contracts\Tenant as TenantContract;
+use JeffersonSimaoGoncalves\Multitenancy\Commands\InstallCommand;
+use JeffersonSimaoGoncalves\Multitenancy\Commands\MigrationMakeCommand;
+use JeffersonSimaoGoncalves\Multitenancy\Commands\AssignAdminPrivileges;
+use JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant as TenantContract;
 
 class MultitenancyServiceProvider extends ServiceProvider
 {
@@ -57,7 +57,7 @@ class MultitenancyServiceProvider extends ServiceProvider
     /**
      * Register the package's publishable resources.
      *
-     * @param Illuminate\Filesystem\Filesystem $filesystem
+     * @param \Illuminate\Filesystem\Filesystem $filesystem
      */
     protected function registerPublishing(Filesystem $filesystem)
     {
@@ -93,7 +93,7 @@ class MultitenancyServiceProvider extends ServiceProvider
     /**
      * Returns existing migration file if found, else uses the current timestamp.
      *
-     * @param Illuminate\Filesystem\Filesystem $filesystem
+     * @param \Illuminate\Filesystem\Filesystem $filesystem
      *
      * @return string
      */

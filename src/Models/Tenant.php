@@ -1,11 +1,11 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Models;
+namespace JeffersonSimaoGoncalves\Multitenancy\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist;
-use RomegaDigital\Multitenancy\Contracts\Tenant as TenantContract;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
+use JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant as TenantContract;
 
 class Tenant extends Model implements TenantContract
 {
@@ -47,9 +47,9 @@ class Tenant extends Model implements TenantContract
      *
      * @param string $domain
      *
-     * @throws \RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist
+     * @throws \JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist
      *
-     * @return \RomegaDigital\Multitenancy\Contracts\Tenant
+     * @return \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
     public static function findByDomain(string $domain): TenantContract
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature\Middleware;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature\Middleware;
 
 use Illuminate\Http\Response;
-use RomegaDigital\Multitenancy\Tests\TestCase;
-use RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist;
-use RomegaDigital\Multitenancy\Middleware\GuestTenantMiddleware;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
+use JeffersonSimaoGoncalves\Multitenancy\Middleware\GuestTenantMiddleware;
 
 class GuestMiddlewareTest extends TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature\Commands;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature\Commands;
 
-use RomegaDigital\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
 
 class InstallCommandTest extends TestCase
 {

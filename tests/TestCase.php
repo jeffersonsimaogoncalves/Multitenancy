@@ -1,16 +1,16 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use RomegaDigital\Multitenancy\Contracts\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant;
 use Spatie\Permission\PermissionServiceProvider;
-use RomegaDigital\Multitenancy\MultitenancyFacade;
-use RomegaDigital\Multitenancy\Tests\Fixtures\User;
+use JeffersonSimaoGoncalves\Multitenancy\MultitenancyFacade;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\User;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use RomegaDigital\Multitenancy\Tests\Fixtures\Product;
-use RomegaDigital\Multitenancy\MultitenancyServiceProvider;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\Product;
+use JeffersonSimaoGoncalves\Multitenancy\MultitenancyServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {

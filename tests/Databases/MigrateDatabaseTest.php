@@ -1,8 +1,8 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Databases;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Databases;
 
-use RomegaDigital\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
 
 class MigrateDatabaseTest extends TestCase
 {

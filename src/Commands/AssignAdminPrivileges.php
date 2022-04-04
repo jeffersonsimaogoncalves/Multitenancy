@@ -1,12 +1,12 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Commands;
+namespace JeffersonSimaoGoncalves\Multitenancy\Commands;
 
 use Illuminate\Console\Command;
 use Spatie\Permission\Models\Role;
-use RomegaDigital\Multitenancy\Multitenancy;
+use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
 
 class AssignAdminPrivileges extends Command
 {
@@ -30,7 +30,7 @@ class AssignAdminPrivileges extends Command
     /**
      * Multitenancy Service Class.
      *
-     * @var RomegaDigital\Multitenancy\Multitenancy
+     * @var \JeffersonSimaoGoncalves\Multitenancy\Multitenancy
      */
     protected $multitenancy;
 
@@ -116,7 +116,7 @@ class AssignAdminPrivileges extends Command
     /**
      * Get admin tenant.
      *
-     * @return RomegaDigital\Multitenancy\Contracts\Tenant
+     * @return JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
     protected function getAdminTenant()
     {

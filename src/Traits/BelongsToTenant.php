@@ -1,8 +1,8 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Traits;
+namespace JeffersonSimaoGoncalves\Multitenancy\Traits;
 
-use RomegaDigital\Multitenancy\Multitenancy;
+use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 
 trait BelongsToTenant
 {
@@ -22,7 +22,7 @@ trait BelongsToTenant
     /**
      * The model belongs to a tenant.
      *
-     * @return Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function tenant()
     {

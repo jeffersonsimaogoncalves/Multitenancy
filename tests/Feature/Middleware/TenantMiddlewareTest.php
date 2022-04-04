@@ -1,13 +1,13 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature\Middleware;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature\Middleware;
 
 use Illuminate\Http\Response;
 use Illuminate\Auth\AuthenticationException;
-use RomegaDigital\Multitenancy\Tests\TestCase;
-use RomegaDigital\Multitenancy\Middleware\TenantMiddleware;
-use RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist;
-use RomegaDigital\Multitenancy\Exceptions\UnauthorizedException;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Middleware\TenantMiddleware;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\UnauthorizedException;
 
 class TenantMiddlewareTest extends TestCase
 {

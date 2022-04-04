@@ -1,6 +1,6 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Contracts;
+namespace JeffersonSimaoGoncalves\Multitenancy\Contracts;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -18,7 +18,7 @@ interface Tenant
      *
      * @param string $domain
      *
-     * @throws \RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist
+     * @throws \JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist
      *
      * @return Tenant
      */

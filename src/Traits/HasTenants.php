@@ -1,8 +1,8 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Traits;
+namespace JeffersonSimaoGoncalves\Multitenancy\Traits;
 
-use RomegaDigital\Multitenancy\Multitenancy;
+use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 
 trait HasTenants
 {
@@ -27,7 +27,7 @@ trait HasTenants
     /**
      * The model belongs to many tenants.
      *
-     * @return Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function tenants()
     {

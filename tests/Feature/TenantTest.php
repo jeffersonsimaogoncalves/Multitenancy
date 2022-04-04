@@ -1,10 +1,10 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Feature;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Feature;
 
-use RomegaDigital\Multitenancy\Exceptions\TenantDoesNotExist;
-use RomegaDigital\Multitenancy\Models\Tenant;
-use RomegaDigital\Multitenancy\Tests\TestCase;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
+use JeffersonSimaoGoncalves\Multitenancy\Models\Tenant;
+use JeffersonSimaoGoncalves\Multitenancy\Tests\TestCase;
 
 class TenantTest extends TestCase
 {

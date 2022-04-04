@@ -1,6 +1,6 @@
 <?php
 
-namespace RomegaDigital\Multitenancy;
+namespace JeffersonSimaoGoncalves\Multitenancy;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace RomegaDigital\Multitenancy\Tests\Fixtures\Policies;
+namespace JeffersonSimaoGoncalves\Multitenancy\Tests\Fixtures\Policies;
 
 class ProductPolicy
 {
