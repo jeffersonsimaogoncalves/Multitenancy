@@ -3,10 +3,10 @@
 namespace JeffersonSimaoGoncalves\Multitenancy\Commands;
 
 use Illuminate\Console\Command;
-use Spatie\Permission\Models\Role;
+use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
 use JeffersonSimaoGoncalves\Multitenancy\Multitenancy;
 use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use JeffersonSimaoGoncalves\Multitenancy\Exceptions\TenantDoesNotExist;
+use Spatie\Permission\Models\Role;
 
 class AssignAdminPrivileges extends Command
 {
@@ -17,7 +17,6 @@ class AssignAdminPrivileges extends Command
      */
     protected $signature = 'multitenancy:super-admin
                                 {identifier : Unique property identifying the user}
-                                {--M|model=\App\User : Model to query the user}
                                 {--C|column=email : Property column name}';
 
     /**
@@ -54,7 +53,7 @@ class AssignAdminPrivileges extends Command
     public function handle()
     {
         $column = $this->option('column');
-        $userModel = $this->option('model');
+        $userModel = config('multitenancy.user_model');
         $identifier = $this->argument('identifier');
 
         if (!class_exists($userModel)) {
@@ -88,7 +87,7 @@ class AssignAdminPrivileges extends Command
      * @param string $column
      * @param string $identifier
      *
-     * @return Illuminate\Database\Eloquent\Model
+     * @return \Illuminate\Database\Eloquent\Model
      */
     protected function getUser($userModel, $column, $identifier)
     {
@@ -100,9 +99,23 @@ class AssignAdminPrivileges extends Command
     }
 
     /**
+     * Write an error for a model which can not be found.
+     *
+     * @param Illuminate\Database\Eloquent\Model $model
+     * @param string $column
+     * @param string $identifier
+     *
+     * @return void
+     */
+    protected function modelNotFound($model, $column, $identifier)
+    {
+        $this->error("$model with $column `$identifier` can not be found!");
+    }
+
+    /**
      * Get admin role.
      *
-     * @return Spatie\Permission\Contracts\Role
+     * @return \Spatie\Permission\Contracts\Role
      */
     protected function getAdminRole()
     {
@@ -114,25 +127,11 @@ class AssignAdminPrivileges extends Command
     }
 
     /**
-     * Get admin tenant.
-     *
-     * @return JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
-     */
-    protected function getAdminTenant()
-    {
-        try {
-            return $this->multitenancy->getTenantClass()::findByDomain('admin');
-        } catch (TenantDoesNotExist $exception) {
-            return $this->cancel('Tenant', 'domain', 'admin');
-        }
-    }
-
-    /**
      * Cancel the command due to errors.
      *
      * @param Illuminate\Database\Eloquent\Model $model
-     * @param string                             $column
-     * @param string                             $identifier
+     * @param string $column
+     * @param string $identifier
      *
      * @return bool
      */
@@ -146,16 +145,16 @@ class AssignAdminPrivileges extends Command
     }
 
     /**
-     * Write an error for a model which can not be found.
+     * Get admin tenant.
      *
-     * @param Illuminate\Database\Eloquent\Model $model
-     * @param string                             $column
-     * @param string                             $identifier
-     *
-     * @return void
+     * @return \JeffersonSimaoGoncalves\Multitenancy\Contracts\Tenant
      */
-    protected function modelNotFound($model, $column, $identifier)
+    protected function getAdminTenant()
     {
-        $this->error("$model with $column `$identifier` can not be found!");
+        try {
+            return $this->multitenancy->getTenantClass()::findByDomain('admin');
+        } catch (TenantDoesNotExist $exception) {
+            return $this->cancel('Tenant', 'domain', 'admin');
+        }
     }
 }
