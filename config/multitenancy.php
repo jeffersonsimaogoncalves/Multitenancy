@@ -43,6 +43,8 @@ return [
         'super_admin' => 'Super Administrator',
     ],
 
+    'guard' => env('MULTITENANCY_GUARD',  'web'),
+
     /*
     |--------------------------------------------------------------------------
     | Policy Files

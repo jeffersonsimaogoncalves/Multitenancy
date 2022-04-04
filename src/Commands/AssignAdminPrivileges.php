@@ -101,7 +101,7 @@ class AssignAdminPrivileges extends Command
     /**
      * Write an error for a model which can not be found.
      *
-     * @param Illuminate\Database\Eloquent\Model $model
+     * @param \Illuminate\Database\Eloquent\Model $model
      * @param string $column
      * @param string $identifier
      *
@@ -120,7 +120,7 @@ class AssignAdminPrivileges extends Command
     protected function getAdminRole()
     {
         try {
-            return Role::findByName(config('multitenancy.roles.super_admin'));
+            return Role::findByName(config('multitenancy.roles.super_admin'), config('multitenancy.guard'));
         } catch (RoleDoesNotExist $exception) {
             return $this->cancel('Role', 'name', config('multitenancy.roles.super_admin'));
         }
@@ -129,7 +129,7 @@ class AssignAdminPrivileges extends Command
     /**
      * Cancel the command due to errors.
      *
-     * @param Illuminate\Database\Eloquent\Model $model
+     * @param \Illuminate\Database\Eloquent\Model $model
      * @param string $column
      * @param string $identifier
      *
